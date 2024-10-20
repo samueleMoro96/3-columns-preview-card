@@ -15,6 +15,12 @@ import SocialList from './SocialList.vue'
 import '../assets/css/base.css'
 
 
+type SocialLink = {
+  label: string,
+  link: string,
+  targetBlank: boolean
+}
+
 export default {
     name: "CardItem",
     components: {
@@ -34,7 +40,7 @@ export default {
             required: true
         },
         socials: {
-            type: Array as () => Array<{ label: string, link: string, targetBlank: boolean }>,
+            type: Array as () => Array<SocialLink>,
             default: () => []
         }
     }
