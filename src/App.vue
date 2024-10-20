@@ -3,29 +3,32 @@
 
 <template>
   <main>
-    <my-profile-card v-if="profileData.length"
-      :profileName="profileData[0].profileName"
-      :location="profileData[0].location"
-      :description="profileData[0].description"
-      :socials="profileData[0].socials"
+    <my-column v-for="(column, index) in columnData"
+      :key="index"
+      :imagePath="column.imagePath"
+      :imageAlt="column.imageAlt"
+      :title="column.title"
+      :description="column.description"
+      :columnColor="columnColors[index]"
     />
   </main>
 </template>
 
 <script lang="ts">
-import CardProfile from './components/Card.vue'
+import Column from './components/Column.vue'
 
 export default {
   data() {
     return {
-      profileData: [
+      columnData: [
         {
-          profileName: '',
-          location: '',
+          imagePath: '',
+          imageAlt: '',
+          title: '',
           description: '',
-          socials: [{ label: '', link: '', targetBlank: true }],
         }
-      ]
+      ],
+      columnColors: ['orange', 'cyan', 'dark-cyan']
     }
   },
   mounted() {
@@ -37,14 +40,14 @@ export default {
         return res.json()
       })
       .then(data => {
-        this.profileData = data.profileData // Imposto i dati ricevuti
+        this.columnData = data.columnData // Imposto i dati ricevuti
       })
       .catch(error => {
         console.error('Error fetching profile data:', error)
       })
   },
   components: {
-    'my-profile-card': CardProfile
+    'my-column': Column
   }
 }
 </script>
