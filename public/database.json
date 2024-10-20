@@ -1,0 +1,16 @@
+{
+    "profileData": [
+        {
+            "profileName": "Jessica Randall",
+            "location": "London, United Kingdom",
+            "description": "Front-end developer and avid reader.",
+            "socials": [
+                { "label": "GitHub", "link": "https://github.com" },
+                { "label": "Frontend Mentor", "link": "https://frontendmentor.com" },
+                { "label": "LinkedIn", "link": "https://linkedin.com" },
+                { "label": "Twitter", "link": "https://x.com" },
+                { "label": "Instragram", "link": "https://instagram.com" }
+            ]
+        }
+    ]
+}

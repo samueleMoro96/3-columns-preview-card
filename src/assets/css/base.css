@@ -1,0 +1,126 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --slp-c-green: hsl(75, 94%, 57%);
+  --slp-c-white: hsl(0, 0%, 100%);
+  --slp-c-grey-800: hsl(0, 0%, 12%);
+  --slp-c-grey-900: hsl(0, 0%, 8%);
+
+  --slp-t-font-size: 14px;
+  --slp-t-color: #fff;
+
+  /* Card */
+  --slp-bg-card-color: hsl(0, 0%, 12%);
+
+  /* Card Buttons */
+  --slp-bg-card-button-color: hsl(0, 0%, 20%);
+  --slp-bg-card-button-color--hover: hsl(0, 0%, 25%);
+  --slp-bg-card-button-color--focus: hsl(0, 0%, 17%);
+}
+
+@font-face {
+  font-family: 'InterBold';
+  src: url('../fonts/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'InterSemiBold';
+  src: url('../fonts/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'InterRegular';
+  src: url('../fonts/Inter-Regular.ttf') format('truetype');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+html {
+  font-size: var(--slp-t-font-size);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--slp-c-grey-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slp-t-color);
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Card */
+#cardContainer {
+  width: 335px;
+  background: var(--slp-c-grey-800);
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 23px;
+}
+
+.cardContainer_profileImage {
+  width: 90px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.cardContainer_mainInfos {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.cardContainer_mainInfos h1 {
+  font-family: 'InterSemiBold';
+  font-size: 1.75rem;
+}
+
+.cardContainer_location {
+  font-family: 'InterSemiBold';
+  color: var(--slp-c-green);
+}
+
+.cardContainer_description {
+  font-family: 'InterRegular';
+}
+
+
+/* Card Link Social */
+#cardContainer_sociaList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.cardContainer_linkSocial {
+  background: var(--slp-bg-card-button-color);
+  color: var(--slp-c-white);
+  width: 100%;
+  padding: 16px;
+  font-family: 'InterBold';
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cardContainer_linkSocial:hover {
+  background: var(--slp-bg-card-button-color--hover);
+}
+
+.cardContainer_linkSocial:focus {
+  background: var(--slp-c-green);
+  color: var(--slp-c-grey-900)
+}
