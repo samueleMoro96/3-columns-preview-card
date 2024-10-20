@@ -1,6 +1,6 @@
 <template>
   <div id="cardContainer_sociaList">
-    <my-social v-for="social in socials" :key="social" :label="social.label" :link="social.link" />
+    <my-social v-for="(social, index) in socials" :key="index" :label="social.label" :link="social.link" />
   </div>
 </template>
 
@@ -10,6 +10,11 @@ import SocialButton from './SocialButton.vue'
 import '../assets/css/base.css'
 
 
+type SocialLink = {
+  label: string,
+  link: string
+}
+
 export default {
     name: "SocialListItem",
     components: {
@@ -17,7 +22,7 @@ export default {
     },
     props: {
         socials: {
-            type: Array as () => Array<{ label: string, link: string }>,
+            type: Array as () => Array<SocialLink>,
             default: () => []
         }
     }
