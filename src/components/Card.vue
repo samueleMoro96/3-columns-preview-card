@@ -34,7 +34,7 @@ export default {
             required: true
         },
         socials: {
-            type: Array as () => Array<{ label: string, link: string }>,
+            type: Array as () => Array<{ label: string, link: string, targetBlank: boolean }>,
             default: () => []
         }
     }

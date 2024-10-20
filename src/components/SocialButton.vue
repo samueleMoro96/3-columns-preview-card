@@ -1,5 +1,9 @@
 <template>
-    <a class="cardContainer_linkSocial" :href="link" :target="targetBlank ? '_blank' : ''">{{ label }}</a>
+    <a class="cardContainer_linkSocial"
+        :href="link"
+        :target="targetBlank ? '_blank' : ''">
+        {{ label }}
+    </a>
 </template>
 
 <script lang="ts">
