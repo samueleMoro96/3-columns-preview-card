@@ -23,7 +23,7 @@ export default {
           profileName: '',
           location: '',
           description: '',
-          socials: [{ label: '', link: '', targetBlank: false }],
+          socials: [{ label: '', link: '', targetBlank: true }],
         }
       ]
     }

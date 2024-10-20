@@ -4,6 +4,7 @@
       :key="index"
       :label="social.label"
       :link="social.link"
+      :targetBlank="social.targetBlank"
     />
   </div>
 </template>
