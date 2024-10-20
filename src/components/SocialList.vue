@@ -9,24 +9,25 @@
 </template>
 
 <script lang="ts">
+import { defineComponent, PropType } from 'vue'
 import SocialButton from './SocialButton.vue'
 
 import '../assets/css/base.css'
 
 
-type SocialLink = {
+interface SocialLink {
   label: string,
   link: string
 }
 
-export default {
+export default defineComponent({
     name: "SocialListItem",
     components: {
         'my-social': SocialButton
     },
     props: {
         socials: {
-            type: Array as () => Array<SocialLink>,
+            type: Array as PropType<SocialLink[]>,
             default: () => []
         }
     }
